@@ -1,0 +1,42 @@
+{
+  "name": "019_fm_000",
+  "version": "1.0.0",
+  "description": "<div> \t<div> \t\t<img src=https://raw.githubusercontent.com/Byron2016/00_forImages/main/images/Logo_01_00.png align=left alt=MyLogo width=200> \t</div> \t&nbsp; \t<div> \t\t<h1>019__FM_000</h1> \t</div> </div>",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass --no-source-map src/scss:public/css",
+    "copy:assets": "copyfiles -u 1 src/assets/**/* public",
+    "copy:html": "copyfiles -u 1 src/*.html public",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
+    "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
+    "watch:sass": "sass --watch src/scss:public/css",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server public --files public",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all copy:assets copy:html build:sass",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
+  },
+  "devDependencies" : {
+    "autoprefixer":"10.4.13",
+    "browser-sync": "2.27.11",
+    "copyfiles": "2.4.1",
+    "cssnano": "5.1.14",
+    "npm-run-all": "4.1.5",
+    "onchange": "7.1.0",
+    "postcss-cli": "10.1.0",
+    "sass": "1.57.1",
+    "netlify-cli": "12.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byron2016/019__FM_000.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Byron2016/019__FM_000/issues"
+  },
+  "homepage": "https://github.com/Byron2016/019__FM_000#readme"
+}
