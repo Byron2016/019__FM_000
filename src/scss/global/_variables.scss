@@ -1,1 +1,16 @@
 /* VARIABLES */
+:root {
+  /*Colors */
+  --clr-cards-primary-400: hsl(215, 51%, 70%); //Soft blue
+  --clr-cards-secondary-400: hsl(178, 100%, 50%); //Cyan
+
+  --clr-neutral-vdb-900: hsl(217, 54%, 11%); //Very dark blue (main BG)
+  --clr-neutral-vdb-600: hsl(216, 50%, 16%); //Very dark blue (card BG)
+  --clr-neutral-vdb-500: hsl(215, 32%, 27%); //Very dark blue (line)
+  --clr-neutral-vdb-400: hsl(216, 50%, 16%); //Very dark blue (main BG)
+  --clr-neutral-w-100: hsl(0, 0%, 100%); //White
+
+  --clr-neutral-1200: hsl(80, 19%, 6%); //propio
+  --clr-neutral-1300: rgba(250, 5, 5, 0.815); //propio
+  --clr-neutral-1400: hsl(0, 0%, 0%); //propio
+}

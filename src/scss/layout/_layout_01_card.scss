@@ -1,0 +1,165 @@
+/* LAYOUT_01_card */
+@use "../util/" as u;
+
+/* card-list */
+.cards_list {
+  background-color: var(--clr-neutral-vdb-900);
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  //max-width: 1100px;
+
+  display: grid;
+  gap: 1rem;
+
+  @include u.breakpoints-up(Small) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include u.breakpoints-up(Large) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  > .card {
+    font-family: var(--ff-base-outfit);
+    font-size: 1rem;
+    background-color: var(--clr-neutral-vdb-600);
+    // background-color: white;
+    color: var(--clr-cards-primary-400);
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+    max-width: 350px;
+    padding: 1rem;
+  }
+}
+
+/* card-content */
+
+.card__content {
+  display: grid;
+  gap: 1rem;
+
+  > .card__title {
+    font-weight: var(--fw-600);
+    font-size: 1.5rem;
+    color: var(--clr-neutral-w-100);
+    margin: auto;
+  }
+
+  > p {
+    font-size: var(--fs-18);
+  }
+
+  .flex_group {
+    > .card__code,
+    .card__return {
+      display: inline-flex;
+      justify-content: center;
+      color: var(--clr-cards-secondary-400);
+
+      > a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  > .card__description {
+    color: var(--clr-neutral-w-100);
+  }
+
+  > .card__creator {
+    display: inline-flex;
+    justify-content: center;
+    color: var(--clr-neutral-w-100);
+  }
+
+  > hr {
+    border-color: var(--clr-neutral-vdb-500);
+  }
+}
+
+/* img */
+.card__img {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+
+  > .card__img picture > img {
+    width: 100%;
+    display: block;
+  }
+
+  > .card__main-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178deg, 100%, 50%, 0.5);
+    display: none;
+  }
+
+  > .card__main-overlay img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover .card__main-overlay {
+    display: block;
+  }
+}
+
+/*  button */
+
+.card__button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: 0.2rem;
+
+  font-weight: var(--fw-600);
+  font-size: 0.8rem;
+  color: var(--clr-neutral-vdb-500);
+  padding: 0.5rem;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: inset 5px 1px 1rem 0.1rem var(-clr-neutral-1300);
+  box-shadow: 0px 0px 2px 2px var(--clr-neutral-1400);
+
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+
+  &[data-icon="github"]:before,
+  &[data-icon="netlify"]:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+  }
+
+  &[data-icon="github"]:before {
+    background-image: url("../assets/Github-22.svg"); //https://brandeps.com/
+    //background-color: red;
+  }
+
+  &[data-icon="netlify"]:before {
+    background-image: url("../assets/Netlify-01.svg");
+    //background-color: rgb(25, 0, 255);
+  }
+
+  &:hover {
+    background-color: var(--clr-cards-secondary-400);
+    transition: 0.7s;
+  }
+
+  &:focus {
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 4px var(--clr-neutral-1300);
+  }
+}

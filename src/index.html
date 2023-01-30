@@ -4,10 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>css tips</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Hellow word</h1>
+    <main>
+      <article class="cards_list">
+        <section class="card">
+          <div class="card__img">
+            <picture class="card__main">
+              <img
+                src="./assets/crd_image-equilibrium.jpg"
+                alt="image-equilibrium"
+              />
+            </picture>
+            <picture class="card__main-overlay">
+              <img src="./assets/crd_icon-view.svg" alt="image-equilibrium" />
+            </picture>
+          </div>
+          <div class="card__content">
+            <p class="card__title">TITLE</p>
+            <p class="card__description">DESCRIPTION</p>
+            <div class="flex_group">
+              <p class="card__code">
+                <a
+                  href="https://github.com/Byron2016/019__FM_000/tree/000_initial-structure"
+                >
+                  <button class="card__button" data-icon="github">
+                    Github
+                  </button>
+                </a>
+              </p>
+
+              <p class="card__return">
+                <a href="products.html">
+                  <button class="card__button" data-icon="netlify">
+                    Netlify
+                  </button>
+                </a>
+              </p>
+            </div>
+            <hr />
+            <p class="card__creator">Creation of BV</p>
+          </div>
+        </section>
+      </article>
+    </main>
   </body>
 </html>

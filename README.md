@@ -12,5 +12,10 @@
 
 ## Project Description
 
-## Steps
+## References
 
+- Cards
+  - By Front Mentor
+    - [NFT preview card component](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U)
+
+## Steps
